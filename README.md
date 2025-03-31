@@ -17,3 +17,12 @@ To compile the full dataset, follow these steps:
 
 ---
 
+### 📊 Dataset Format
+The compiled full dataset has the following format:
+- **First Column:** `Probe_ID`, which uniquely identifies each probe.
+- **Subsequent Columns:** Raw microarray signal values, one column per subject.
+
+This structure allows for efficient data processing and analysis.
+
+
+
