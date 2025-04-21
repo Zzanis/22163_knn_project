@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-import numpy as np 
-import random
+import random 
 import numpy as np
-import random
+
 
 class KNN_tester:
     def __init__(self, filename: str):
@@ -43,6 +42,24 @@ class KNN_tester:
         indices = random.sample(range(n_elements), n_nan)
         flat_data[indices] = np.nan
         self.data_with_nan = flat_data.reshape(self.raw_data.shape).copy()
+        
+    def mean_impute(self):
+        """
+        Imputes missing values in self.data_with_nan using column-wise mean.
+        Stores the result in self.imputed_data.
+        """
+        if self.data_with_nan is None:
+            raise ValueError("Data with NaNs has not been initialized. Call introduce_nan_randomly first.")
+
+        data = self.data_with_nan.copy()
+        # Compute column means ignoring NaNs
+        col_means = np.nanmean(data, axis=0)
+        # Find indices where NaNs are located
+        inds = np.where(np.isnan(data))
+        # Replace NaNs with corresponding column mean
+        data[inds] = np.take(col_means, inds[1])
+
+        self.imputed_data = data
 
     def impute_data_knn(self, k: int):
         """
