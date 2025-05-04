@@ -1,6 +1,9 @@
+import sys 
+import os 
 import numpy as np
 import pytest
-from your_module import impute_knn  # Import your function
+sys.path.append(os.path.abspath('../../src'))
+from knn_impute import impute_knn 
 
 def test_impute_knn_basic():
     """Test basic functionality of KNN imputation with a simple dataset."""
