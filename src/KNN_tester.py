@@ -202,7 +202,7 @@ class KNN_tester:
             return False
 
 
-# If run directly, show usage information
+# If running directly, show usage information
 if __name__ == "__main__":
     print("This is a module file containing the KNN_tester class.")
     print("To use it for testing, run generate_test.py instead.")

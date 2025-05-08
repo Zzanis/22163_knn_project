@@ -2,6 +2,5 @@ src/testing.ipynb
 target/full_dataset.txt
 temp/
 src/evaluation_knn.py
-target/test_data.txt
 raw_data/
 project_22163.zip
