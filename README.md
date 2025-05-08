@@ -134,9 +134,4 @@ project/
 
 ---
 
-## 📬 Questions?
-
-Feel free to open an issue or contact the maintainer for assistance or feature requests.
-
-
 
